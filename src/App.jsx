@@ -28,6 +28,7 @@ function App() {
           {activeContent === 'add_item' && <InsertForm />}
           {activeContent === 'manage_items' && <ProductList/>}
           {activeContent === 'order' && <OrderList/>}
+           {activeContent === 'customer' && <CustomersList/>}
         </div>
       </div>
     </>
