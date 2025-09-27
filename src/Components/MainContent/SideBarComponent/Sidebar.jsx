@@ -41,7 +41,7 @@ function Sidebar({ sidebarClick }) {
         <SidebarButtons
           lable="Customers"
           icon={customer}
-          onClick={() => sidebarClick('order')}
+          onClick={() => sidebarClick('customer')}
         />
         <SidebarButtons
           lable="Analytics Report"
