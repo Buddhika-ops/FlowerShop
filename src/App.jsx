@@ -5,10 +5,10 @@ import { useState } from 'react';
 import Sidebar from './Components/MainContent/SideBarComponent/Sidebar';
 import InsertForm from './Components/MainContent/AdminOptions/Insert/InsertForm';
 import ProductList from './Components/MainContent/AdminOptions/manageProducts/ProductList';
-import DeleteProduct from './Components/MainContent/AdminOptions/manageProducts/DeleteProduct'
-import UpdateForm from './Components/MainContent/AdminOptions/manageProducts/UpdateForm';
 import CustomersList from'./Components/MainContent/AdminOptions/customers/CustomersList'
-import OrderList from './Components/MainContent/AdminOptions/orders/OrderList'
+import CompletedOrders from './Components/MainContent/AdminOptions/orders/CompletedOrders'
+import PendingList from './Components/MainContent/AdminOptions/orders/PendingList';
+import AnalyticsReport from './Components/MainContent/AdminOptions/analyticsReport/AnalyticsReport';
 function App() {
   const [activeContent, setActiveContent] = useState('dashBord');
 
@@ -27,8 +27,10 @@ function App() {
           
           {activeContent === 'add_item' && <InsertForm />}
           {activeContent === 'manage_items' && <ProductList/>}
-          {activeContent === 'order' && <OrderList/>}
-           {activeContent === 'customer' && <CustomersList/>}
+          {activeContent === 'order' && <PendingList/>}
+          {activeContent === 'customer' && <CustomersList/>}
+          {activeContent === 'completed' && <CompletedOrders/>}
+          {activeContent === 'analytics' && <AnalyticsReport/>}
         </div>
       </div>
     </>

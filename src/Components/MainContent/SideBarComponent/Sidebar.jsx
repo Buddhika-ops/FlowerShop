@@ -44,10 +44,16 @@ function Sidebar({ sidebarClick }) {
           onClick={() => sidebarClick('customer')}
         />
         <SidebarButtons
+          lable="Completed Orders"
+          icon={support}
+          onClick={() => sidebarClick('completed')}
+        />
+        <SidebarButtons
           lable="Analytics Report"
           icon={analytics}
-          onClick={() => sidebarClick('order')}
+          onClick={() => sidebarClick('analytics')}
         />
+        
         <SidebarTopics topic="Other" />
         <SidebarButtons
           lable="Settings"
@@ -59,11 +65,7 @@ function Sidebar({ sidebarClick }) {
           icon={inbox}
           onClick={() => sidebarClick('order')}
         />
-        <SidebarButtons
-          lable="Help & support"
-          icon={support}
-          onClick={() => sidebarClick('order')}
-        />
+        
       </div>
     </div>
   );
